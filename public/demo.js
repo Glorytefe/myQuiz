@@ -42,12 +42,10 @@ class displayQuestion {
   static displayQtn(data) {
     length = data.length;
     currentQue = data[index];
-    for (let i = 0; i < length; i++) {
-      innerMe.innerHTML = `<div>
+    innerMe.innerHTML = `<div>
           <h1 class="qq">Question ${index + 1} of ${length}</h1>
             <p class="que">${currentQue.qtn}</p>
         </div>`;
-    }
     index++;
     quizcount++;
     this.displayOption(data);
@@ -80,7 +78,7 @@ function getResult(e) {
   let childrenOptns = [...options.children];
   liDOM = childrenOptns;
 
-  if (e.innerText == currentQue.answers) {
+  if (e.innerText === currentQue.answers) {
     e.classList.add("correct");
     updateind("correct");
     correctAnswer++;
@@ -88,7 +86,7 @@ function getResult(e) {
     e.classList.add("wrong");
     updateind("wrong");
     childrenOptns.forEach((childs) => {
-      if (childs.innerText == currentQue.answers) {
+      if (childs.innerText === currentQue.answers) {
         childs.classList.add("correct");
       }
     });
@@ -175,11 +173,11 @@ function gohome() {
   resultss.classList.add("hide");
 }
 function tryAgain() {
-  resetQuiz();
-  start();
   questbox.classList.remove("hide");
   instructBox.classList.add("hide");
   resultss.classList.add("hide");
+  resetQuiz();
+  start();
 }
 function start() {
   const questionget = new getQuestion();
