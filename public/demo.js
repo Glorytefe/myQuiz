@@ -77,8 +77,9 @@ class displayQuestion {
 function getResult(e) {
   let childrenOptns = [...options.children];
   liDOM = childrenOptns;
-
-  if (e.innerText === currentQue.answers) {
+  let answe = currentQue.answers;
+  // console.log(typeof );
+  if (e.innerText === answe) {
     e.classList.add("correct");
     updateind("correct");
     correctAnswer++;
@@ -86,8 +87,9 @@ function getResult(e) {
     e.classList.add("wrong");
     updateind("wrong");
     childrenOptns.forEach((childs) => {
-      if (childs.innerText === currentQue.answers) {
+      if (childs.textContent === answe) {
         childs.classList.add("correct");
+        console.log(answe);
       }
     });
   }

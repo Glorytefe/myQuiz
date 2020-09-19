@@ -71,7 +71,7 @@ p {
   padding: 0.7rem 0.4rem;
   border-radius: 5px;
   cursor: pointer;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   /* opacity: 0; */
   animation: fadeIn 0.3s ease forwards;
 }
