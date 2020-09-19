@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="cols">
+      <div class="container">
+        <div class="quiz-box">
+          <div class="box instruction-box">
+            <div class="contents">
+              <h1>Instruction:</h1>
+              <p class="five">Total number of questions:</p>
+              <p>Attempt all questions</p>
+              <button class="btn start" onclick="start()">Start Quiz</button>
+            </div>
+          </div>
+          <div class="box quest-box hide">
+            <div class="contents cont">
+              <div class="inner"></div>
+              <div class="option">
+                <ul class="questions questionsopt"></ul>
+              </div>
+
+              <!-- <div class="que my-3"></div> -->
+              <div class="btns"></div>
+
+              <div class="cc"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box result contents hide">
+          <div class="result-cont">
+            <h1 class="qq text-center">Quiz Result</h1>
+            <table class="table-bordered table mx-auto res"></table>
+            <div class="button mx-auto text-center">
+              <button class="btn start try" onclick="tryAgain()">
+                Try Again
+              </button>
+              <button class="btn start home" onclick="gohome()">
+                Go To Home
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="demo.js"></script>
+    <script src="bootstrap/jquery.js"></script>
+    <script src="bootstrap/popper.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+  </body>
+</html>

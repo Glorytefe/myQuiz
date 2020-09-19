@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bk-col: #104710;
+  --bk-col2: #ffffff;
+  --li-col: #ebe5e5;
+}
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+p {
+  font-size: 18px;
+}
+
+body {
+  background-color: var(--bk-col);
+  font-family: "Kumbh Sans", sans-serif;
+}
+.box {
+  background-color: var(--bk-col2);
+  border-radius: 1rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem 1rem 1rem 1rem;
+}
+
+.start {
+  background-color: var(--bk-col);
+  color: var(--bk-col2);
+  width: 8rem;
+}
+.start:hover {
+  background-color: var(--bk-col);
+  opacity: 0.7;
+  color: var(--bk-col2);
+}
+.contents h1,
+p {
+  padding: 0 0 0.5rem 0;
+}
+.hide {
+  display: none;
+}
+.five::after {
+  content: " \0031 \0030";
+  font-weight: 700;
+}
+.questions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.que {
+  border-bottom: 1px solid black;
+}
+.qq {
+  color: var(--bk-col);
+}
+.qq::before {
+  content: "";
+}
+.options {
+  background-color: var(--li-col);
+  margin: 0 0 0.7rem 0;
+  padding: 0.7rem 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: capitalize;
+  /* opacity: 0; */
+  animation: fadeIn 0.3s ease forwards;
+}
+.options.correct {
+  color: white;
+  /* animation: slideLe 0.3s ease forwards; */
+  background-color: green;
+}
+.options.wrong {
+  color: white;
+  /* animation: slideLe 0.3s ease forwards; */
+  background-color: red;
+}
+
+.options.answered {
+  pointer-events: none;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cc {
+  display: flex;
+  max-width: 400px;
+  justify-content: space-between;
+}
+.circle {
+  /* display: flex; */
+  height: 25px;
+  width: 25px;
+  background-color: var(--li-col);
+  border-radius: 50%;
+  border: 1px solid grey;
+  margin: 9px 0;
+  cursor: pointer;
+}
+.circle.wrong {
+  background-color: red;
+  background-image: url("img/wrong.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+.circle.correct {
+  background-color: green;
+  background-image: url("img/correct.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+}
+.res {
+  max-width: 500px;
+}
+.button {
+  max-width: 300px;
+}
+
+.button button {
+  margin: 0.5rem;
+}
