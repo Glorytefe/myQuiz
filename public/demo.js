@@ -22,7 +22,7 @@ let availOpt = [];
 class getQuestion {
   async getMe() {
     try {
-      let apiQuest = await fetch("https://opentdb.com/api.php?amount=10");
+      let apiQuest = await fetch("https://opentdb.com/api.php?amount=10&type=multiple");
       let questionres = await apiQuest.json();
       data = questionres.results;
       data = data.map((ques) => {
@@ -54,16 +54,13 @@ class displayQuestion {
     let opts = [...currentQue.incorrect, currentQue.answers];
     let length = opts.length;
 
-    // }
     let content = "";
     for (let i = 0; i < length; i++) {
       availOpt.push(i);
     }
-    //
     opts.forEach(() => {
       let randomOpt = availOpt[Math.floor(Math.random() * availOpt.length)];
       content += `<li class= "options" onclick="getResult(this)">${opts[randomOpt]}</li>`;
-      // opts.push(randomOpt);
       let index1 = availOpt.indexOf(randomOpt);
       availOpt.splice(index1, 1);
     });
@@ -78,7 +75,6 @@ function getResult(e) {
   let childrenOptns = [...options.children];
   liDOM = childrenOptns;
   let answe = currentQue.answers;
-  // console.log(typeof );
   if (e.innerText === answe) {
     e.classList.add("correct");
     updateind("correct");

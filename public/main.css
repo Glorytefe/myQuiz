@@ -71,18 +71,14 @@ p {
   padding: 0.7rem 0.4rem;
   border-radius: 5px;
   cursor: pointer;
-  /* text-transform: capitalize; */
-  /* opacity: 0; */
   animation: fadeIn 0.3s ease forwards;
 }
 .options.correct {
   color: white;
-  /* animation: slideLe 0.3s ease forwards; */
   background-color: green;
 }
 .options.wrong {
   color: white;
-  /* animation: slideLe 0.3s ease forwards; */
   background-color: red;
 }
 
@@ -104,7 +100,6 @@ p {
   justify-content: space-between;
 }
 .circle {
-  /* display: flex; */
   height: 25px;
   width: 25px;
   background-color: var(--li-col);
