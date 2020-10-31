@@ -8,6 +8,9 @@ A vanilla js quiz app adequate for learning
 4. Displays answer
 5. Display questions from several categories including(entertainment, general knowledge, science, etc)
 
-# Link
+# Run app
+To run app, open the index.html with any browser or run with live server on your code editor
+
+# Deployed Link 
 https://gloquiz.netlify.app
 
